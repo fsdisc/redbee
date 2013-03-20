@@ -1,0 +1,143 @@
+<html>
+<head>
+#if ($query.equals(""))
+  <title>$lang.search_page_title | $lang.site_title</title>
+#else
+  <title>$queryR | $lang.search_page_title | $lang.site_title</title>
+#end
+  <script src="/scripts/jquery-1.8.3.min.js"></script>
+  <link rel="stylesheet" href="/styles/common.css" type="text/css" media="all" />
+  <style>
+#finder {
+  width: 500px;
+  margin: 10px auto;
+}
+.result-list {
+  padding: 10px;
+}
+.result {
+  border-bottom: solid 1px gainsboro;
+  padding: 10px 0px 10px 0px;
+}
+.result:first-child {
+  border-top: solid 1px gainsboro;
+}
+.result em {
+  color: red;
+}
+.result strong {
+  color: red;
+  font-style: italic;
+  font-weight: normal;
+}
+.result .desc {
+  padding-top: 5px;
+}
+.result .no {
+  padding-right: 10px;
+  color: grey;
+}
+.page-list {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.top-page-list {
+  padding-bottom: 0px;
+  padding-top: 10px;
+}
+.bottom-page-list {
+  padding-bottom: 10px;
+  padding-top: 0px;
+}
+.page-list .page {
+  padding: 2px 5px 2px 5px;
+  text-decoration: none;
+  color: blue;
+  border: solid 1px gainsboro;
+}
+.page-list .curpage {
+  padding: 2px 5px 2px 5px;
+  text-decoration: none;
+  color: black;
+  border: solid 1px blue;
+}
+  </style>
+  <script>
+$(document).ready(function() {
+  $('#q').val($('#qb').text());
+  $('#q').focus();
+  $('#q').keydown(function(e) {
+    if (e.which == 13) {
+      $('form').submit();
+      return false;
+    } else {
+      return true;
+    }
+  });
+});
+  </script>
+</head>
+<body>
+  <div id="topbar">
+    <table width="100%" cellpadding="0" cellspacing="0">
+      <tr>
+        <td valign="top">
+          <div class="menu"><a href="/">$lang.topbar_home</a></div>
+          <div class="sep"><span>&nbsp;</span></div>
+          <div class="menu"><a href="search.jsp?q=$queryE&p=$pageno&e=g">$lang.topbar_google</a></div>
+          <div class="menu"><a href="search.jsp?q=$queryE&p=$pageno&e=b">$lang.topbar_bing</a></div>
+          <div class="sep"><span>&nbsp;</span></div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="workspace">
+    <div class="frame" id="finder">
+      <div style="padding: 10px; padding-bottom: 2px;">
+        <form action="search.jsp" method="get">
+        <div class="entry-row">
+           <input type="hidden" name="e" value="$engine" />
+           <div id="qb" style="display: none">$queryR</div>
+           <input type="text" id="q" name="q" class="textbox" />
+        </div>
+        <div class="action-row" style="margin-top: 10px; padding-bottom: 0px; margin-bottom: 0px;">
+           <input type="submit" value="$lang.search_search" class="button" />
+        </div>
+        </form>
+      </div>
+    </div>
+#if ($query.trim().equals(""))
+#else
+     <div class="page-list top-page-list">
+  #foreach ($p in $pagelist)
+    #if ($p.equals($pageno))
+       <a href="search.jsp?q=$queryE&p=$p&e=$engine" class="curpage">$p</a>
+    #else
+       <a href="search.jsp?q=$queryE&p=$p&e=$engine" class="page">$p</a>
+    #end
+  #end
+     </div>
+    <div class="result-list">
+  #foreach ($et in $results)
+     <div class="result">
+       <div class="title">
+         <span class="no">$et.no.</span>
+         <a target="_blank" href="$et.link">$et.titleF</a>
+       </div>
+       <div class="desc">$et.descF</div>
+     </div>
+  #end
+    </div>
+     <div class="page-list bottom-page-list">
+  #foreach ($p in $pagelist)
+    #if ($p.equals($pageno))
+       <a href="search.jsp?q=$queryE&p=$p&e=$engine" class="curpage">$p</a>
+    #else
+       <a href="search.jsp?q=$queryE&p=$p&e=$engine" class="page">$p</a>
+    #end
+  #end
+     </div>
+#end
+  </div>
+</body>
+</html>

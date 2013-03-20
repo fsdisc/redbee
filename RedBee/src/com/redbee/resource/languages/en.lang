@@ -1,0 +1,20 @@
+
+site_title=Red Bee
+topbar_search=Search
+topbar_bookmark_list=Bookmarks
+topbar_home=Home
+topbar_google=Google
+topbar_bing=Bing
+
+search_page_title=Search
+search_search=Search
+
+bookmark_page_title=Bookmark
+bookmark_title=Title
+bookmark_link=Link
+bookmark_save=Save
+bookmark_cancel=Cancel
+bookmark_title_required=Title is required!
+
+bookmark_list_page_title=Bookmarks
+bookmark_list_search=Search

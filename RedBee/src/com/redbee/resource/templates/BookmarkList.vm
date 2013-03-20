@@ -1,0 +1,243 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+#if ($query.equals(""))
+  <title>$lang.bookmark_list_page_title | $lang.site_title</title>
+#else
+  <title>$queryR | $lang.bookmark_list_page_title | $lang.site_title</title>
+#end
+  <script src="/scripts/jquery-1.8.3.min.js"></script>
+  <link rel="stylesheet" href="/styles/common.css" type="text/css" media="all" />
+  <style>
+#finder {
+  width: 500px;
+  margin: 10px auto;
+}
+.result-list {
+  padding: 10px;
+}
+.result {
+  border-bottom: solid 1px gainsboro;
+  padding: 10px 0px 10px 0px;
+}
+.result:first-child {
+  border-top: solid 1px gainsboro;
+}
+.result em {
+  color: red;
+}
+.result strong {
+  color: red;
+  font-style: italic;
+  font-weight: normal;
+}
+.result b {
+  color: red;
+  font-style: italic;
+  font-weight: normal;
+}
+.result .desc {
+  padding-top: 5px;
+}
+.result .no {
+  padding-right: 10px;
+  color: grey;
+}
+.page-list {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.top-page-list {
+  padding-bottom: 0px;
+  padding-top: 10px;
+}
+.bottom-page-list {
+  padding-bottom: 10px;
+  padding-top: 0px;
+}
+.page-list .page {
+  padding: 2px 5px 2px 5px;
+  text-decoration: none;
+  color: blue;
+  border: solid 1px gainsboro;
+}
+.page-list .curpage {
+  padding: 2px 5px 2px 5px;
+  text-decoration: none;
+  color: black;
+  border: solid 1px blue;
+}
+  </style>
+  <script>
+var sh = 0;
+var curRow = null;
+$(document).ready(function() {
+  $('#q').val($('#qb').text());
+  $('#q').focus();
+  $('#q').keydown(function(e) {
+    if (e.which == 13) {
+      $('form').submit();
+      return false;
+    } else {
+      return true;
+    }
+  });
+  $('.result').mouseover(function() {
+    if (curRow != null) {
+      curRow.css('background-color', 'white');
+      curRow.css('border-right', 'solid 0px transparent');
+      curRow.css('border-left', 'solid 0px transparent');
+      curRow.css('padding-left', '0px');
+      curRow.css('padding-right', '0px');
+    }
+    $(this).css('background-color', 'whitesmoke');
+    $(this).css('border-right', 'solid 5px #2b60a5');
+    $(this).css('border-left', 'solid 1px gainsboro');
+    $(this).css('padding-left', '5px');
+    $(this).css('padding-right', '5px');
+    curRow = $(this);
+    var id = $(this).attr('preview');
+    if (id == '') {
+      $('#preview').hide();
+    } else {
+      var img = imgMap[id];
+      if (img != null) {
+        var url = 'file.jsp?drive=bookmark&kind=full-preview&code=' + id;
+        if ($('#preview').attr('src') == url) {
+        } else {
+          document.getElementById('preview').src = img.src;
+          //$('#preview').attr('src', url);
+          $('#preview').show();
+        }
+      }
+    }
+  });
+  $('.result').mouseout(function() {
+    //$('#preview').hide();
+  });
+  $(document).scroll(function() {
+    var st = $(document).scrollTop();
+    if (st > 160) {
+      $('.preview').css('top', '30px');
+      var h = sh - 30 - 5;
+      $('.preview').css('height', h + 'px');
+    } else {
+      var top = 160 - st;
+      $('.preview').css('top', top + 'px');
+      var h = sh - top - 5;
+      $('.preview').css('height', h + 'px');
+    }
+  });
+  $(window).resize(function() {
+    resize();
+  });
+  resize();
+#if ($results.size().equals(0))
+  $('.preview').css('border', 'solid 1px transparent');
+#else
+#end
+  preloadImages();
+});
+
+function resize() {
+  sh = $(window).height();
+  document.tilte = sh;
+  var st = $(document).scrollTop();
+  if (st > 160) {
+    var h = sh - 30 - 5;
+    $('.preview').css('height', h + 'px');
+  } else {
+    var top = 160 - st;
+    var h = sh - top - 5;
+    $('.preview').css('height', h + 'px');
+  }
+}
+
+var imgMap = new Object();
+function preloadImages() {
+  var children = $('.result');
+  for (var i = 0; i < children.size(); i++) {
+    var id = $(children[i]).attr('preview');
+    if (id != '') {
+      var url = 'file.jsp?drive=bookmark&kind=full-preview&code=' + id;
+      var img = new Image();
+      img.src = url;
+      imgMap[id] = img;
+    }
+  }
+}
+  </script>
+</head>
+<body>
+  <div id="topbar">
+    <table width="100%" cellpadding="0" cellspacing="0">
+      <tr>
+        <td valign="top">
+          <div class="menu"><a href="/">$lang.topbar_home</a></div>
+          <div class="sep"><span>&nbsp;</span></div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="workspace">
+    <div class="frame" id="finder">
+      <form action="bookmark-list.jsp" method="get">
+      <div style="padding: 10px;">
+        <div class="entry-row" style="padding-right: 10px;">
+           <div id="qb" style="display: none">$queryR</div>
+           <input type="text" id="q" name="q" class="textbox" />
+        </div>
+        <div class="action-row" style="margin-top: 10px;">
+           <input type="submit" value="$lang.bookmark_list_search" class="button" />
+        </div>
+      </div>
+      </form>
+    </div>
+#if ($results.size().equals(0))
+#else
+     <div class="page-list top-page-list">
+  #foreach ($p in $pagelist)
+    #if ($p.equals($pageno))
+       <a href="bookmark-list.jsp?q=$queryE&p=$p" class="curpage">$p</a>
+    #else
+       <a href="bookmark-list.jsp?q=$queryE&p=$p" class="page">$p</a>
+    #end
+  #end
+     </div>
+#end
+     <table width="100%">
+       <tr>
+         <td>
+    <div class="result-list">
+  #foreach ($et in $results)
+     <div class="result" preview="$et.preview">
+       <div class="title">
+         <a target="_blank" href="$et.link">$et.titleF</a>
+       </div>
+       <div class="desc">$et.descF</div>
+     </div>
+  #end
+    </div>
+         </td>
+         <td width="400px">
+<div class='preview' style="width: 400px; min-height: 150px; overflow: auto; border: solid 1px gainsboro; position: fixed; top: 160px; right: 5px;">
+<img src="" id="preview" style="display: none" />
+</div>
+         </td>
+       </tr>
+     </table>
+#if ($results.size().equals(0))
+#else
+     <div class="page-list bottom-page-list">
+  #foreach ($p in $pagelist)
+    #if ($p.equals($pageno))
+       <a href="bookmark-list.jsp?q=$queryE&p=$p" class="curpage">$p</a>
+    #else
+       <a href="bookmark-list.jsp?q=$queryE&p=$p" class="page">$p</a>
+    #end
+  #end
+     </div>
+#end
+  </div>
+</body>
+</html>

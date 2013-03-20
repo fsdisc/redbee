@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT type="Advanced Installer" CreateVersion="7.2.1" version="7.2.1" modules="java" RootPath="." Language="en">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_FINDEXE_TITLE" Value="Select the installation package for [|ProductName]" ValueLocId="AI.Property.FindExeTitle"/>
+    <ROW Property="AI_MINJREVERSION" MultiBuildValue="DefaultBuild:1.6" ValueLocId="-"/>
+    <ROW Property="ALLUSERS" Value="2"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="BannerBitmap" MultiBuildValue="DefaultBuild:banner_image.jpg" Type="1"/>
+    <ROW Property="DialogBitmap" MultiBuildValue="DefaultBuild:dialog_image.jpg" Type="1"/>
+    <ROW Property="Manufacturer" Value="Sao Bien Software" ValueLocId="*"/>
+    <ROW Property="ProductCode" Value="1033:{AA5206A6-2C3C-48A3-BAA4-6AEE599B103F} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="Red Bee Browser" ValueLocId="*"/>
+    <ROW Property="ProductVersion" Value="1.0.0"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
+    <ROW Property="UpgradeCode" Value="{DB68D86B-911C-4B77-8F81-BC71A3714C35}"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="Deskto~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="RedBee_DIR" Directory_Parent="APPDIR" DefaultDir="bin"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="cfg_DIR" Directory_Parent="APPDIR" DefaultDir="cfg"/>
+    <ROW Directory="com_DIR" Directory_Parent="RedBee_DIR" DefaultDir="com"/>
+    <ROW Directory="components_DIR" Directory_Parent="xulrunner_DIR" DefaultDir="compon~1|components"/>
+    <ROW Directory="dat_DIR" Directory_Parent="APPDIR" DefaultDir="dat"/>
+    <ROW Directory="dictionaries_DIR" Directory_Parent="xulrunner_DIR" DefaultDir="dictio~1|dictionaries"/>
+    <ROW Directory="ext_DIR" Directory_Parent="APPDIR" DefaultDir="ext"/>
+    <ROW Directory="images_DIR" Directory_Parent="resource_DIR" DefaultDir="images"/>
+    <ROW Directory="languages_DIR" Directory_Parent="resource_DIR" DefaultDir="langua~1|languages"/>
+    <ROW Directory="log_DIR" Directory_Parent="APPDIR" DefaultDir="log"/>
+    <ROW Directory="redbee_DIR" Directory_Parent="com_DIR" DefaultDir="redbee"/>
+    <ROW Directory="resource_DIR" Directory_Parent="redbee_DIR" DefaultDir="resource"/>
+    <ROW Directory="schema_DIR" Directory_Parent="redbee_DIR" DefaultDir="schema"/>
+    <ROW Directory="scripts_DIR" Directory_Parent="resource_DIR" DefaultDir="scripts"/>
+    <ROW Directory="styles_DIR" Directory_Parent="resource_DIR" DefaultDir="styles"/>
+    <ROW Directory="templates_DIR" Directory_Parent="resource_DIR" DefaultDir="templa~1|templates"/>
+    <ROW Directory="web_DIR" Directory_Parent="redbee_DIR" DefaultDir="web"/>
+    <ROW Directory="xulrunner_DIR" Directory_Parent="ext_DIR" DefaultDir="xulrun~1|xulrunner"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AI_ExePath" ComponentId="{461498F4-31F7-40F0-8B2C-D8E24D437A68}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
+    <ROW Component="AccessibleMarshal.dll" ComponentId="{FDFCC065-6F92-4F1C-99DC-DDF1620BB524}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="AccessibleMarshal.dll"/>
+    <ROW Component="Bookmark.vm" ComponentId="{36750AE1-B793-41C8-B9CD-EA2EBB545BB5}" Directory_="templates_DIR" Attributes="0" KeyPath="Bookmark.vm" Type="0"/>
+    <ROW Component="BookmarkListPage.class" ComponentId="{8ADC538A-D46D-4971-9AE2-9EA7BB9115C8}" Directory_="web_DIR" Attributes="0" KeyPath="BookmarkListPage.class" Type="0"/>
+    <ROW Component="CodeTool.class" ComponentId="{51B9EA92-4C04-4CA3-9187-8F9D78BED54D}" Directory_="redbee_DIR" Attributes="0" KeyPath="CodeTool.class" Type="0"/>
+    <ROW Component="D3DCompiler_43.dll" ComponentId="{DED62630-DAB2-403C-A9B2-83251A953658}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="D3DCompiler_43.dll"/>
+    <ROW Component="Entity_Handler.class" ComponentId="{C86B6E3E-E713-44A1-B71C-87C3A1FCCB80}" Directory_="schema_DIR" Attributes="0" KeyPath="Entity_Handler.class" Type="0"/>
+    <ROW Component="IA2Marshal.dll" ComponentId="{874328AF-6C8B-471A-9A3A-7BAF315A7FDE}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="IA2Marshal.dll"/>
+    <ROW Component="RedBee.exe" ComponentId="{8A68CBBA-3312-42F6-9C47-15FA5973FAAC}" Directory_="APPDIR" Attributes="0" KeyPath="RedBee.exe"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{F5164E36-BD83-4DFE-9621-BCF34C3F2597}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="binary.manifest" ComponentId="{6C6A6825-F6B7-4863-87AD-FEF0F6D3F066}" Directory_="components_DIR" Attributes="0" KeyPath="binary.manifest" Type="0"/>
+    <ROW Component="chrome.manifest" ComponentId="{E789DE74-1F2D-41A3-B7C0-B785EFD416EC}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="chrome.manifest" Type="0"/>
+    <ROW Component="common.css" ComponentId="{5DCEB60B-944C-423F-80DE-D38162B192BD}" Directory_="styles_DIR" Attributes="0" KeyPath="common.css" Type="0"/>
+    <ROW Component="config.properties" ComponentId="{91CE472B-3814-4B88-826A-4B36766C73C6}" Directory_="cfg_DIR" Attributes="0" KeyPath="config.properties" Type="0"/>
+    <ROW Component="crashreporter.exe" ComponentId="{277E17AE-CFFA-4A03-B9A4-9CE3D6B27D52}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="crashreporter.exe"/>
+    <ROW Component="d3dx9_43.dll" ComponentId="{D0547696-C095-4383-A97D-3CBC543ACAE2}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="d3dx9_43.dll"/>
+    <ROW Component="dat" ComponentId="{58D8AA80-7490-4DA5-BBCE-1CD4F532F096}" Directory_="dat_DIR" Attributes="0"/>
+    <ROW Component="en.lang" ComponentId="{0DA3896B-9448-424E-B9AF-274A50199229}" Directory_="languages_DIR" Attributes="0" KeyPath="en.lang" Type="0"/>
+    <ROW Component="en_US.aff" ComponentId="{A4F3068C-77CF-4CDA-B638-FE22C74F9D20}" Directory_="dictionaries_DIR" Attributes="0" KeyPath="en_US.aff" Type="0"/>
+    <ROW Component="freebl3.dll" ComponentId="{209901D3-6E25-462B-8C0B-6DC41B56ED0C}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="freebl3.dll"/>
+    <ROW Component="icon_16x16.png" ComponentId="{8B6BD5ED-10E4-46C2-BDF2-A1616FF13206}" Directory_="images_DIR" Attributes="0" KeyPath="icon_16x16.png" Type="0"/>
+    <ROW Component="jquery_1.8.3.min.js" ComponentId="{69267EE1-AA26-41A4-8311-D9B370D37310}" Directory_="scripts_DIR" Attributes="0" KeyPath="jquery_1.8.3.min.js" Type="0"/>
+    <ROW Component="js.exe" ComponentId="{860609F9-537D-4D0E-85D4-36E78A97E77D}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="js.exe"/>
+    <ROW Component="libEGL.dll" ComponentId="{894AE7C2-25A7-4CF3-BCC5-4259F1216B97}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="libEGL.dll"/>
+    <ROW Component="libGLESv2.dll" ComponentId="{C245DED3-B3E1-47BA-B821-8F1DE2DC3378}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="libGLESv2.dll"/>
+    <ROW Component="log" ComponentId="{24F999C8-13B1-4BDF-82D2-0F0D05377BCD}" Directory_="log_DIR" Attributes="0"/>
+    <ROW Component="mozalloc.dll" ComponentId="{368D97E0-7B5B-45DB-9F88-45A9E443DF36}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="mozalloc.dll"/>
+    <ROW Component="mozjs.dll" ComponentId="{05747F34-BB99-4A9E-807B-C048152FC7F5}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="mozjs.dll"/>
+    <ROW Component="mozsqlite3.dll" ComponentId="{6BC4F9AC-BE33-45BC-A1FA-93878F30571E}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="mozsqlite3.dll"/>
+    <ROW Component="mozutils.dll" ComponentId="{518A4E77-8629-4028-92C4-FA296DC731AF}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="mozutils.dll"/>
+    <ROW Component="msvcm80.dll" ComponentId="{25F065FF-4EF6-4B3A-A1EC-706BE89BBA21}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="msvcm80.dll"/>
+    <ROW Component="msvcp80.dll" ComponentId="{37E34075-6439-45E1-8A07-D3A441F2D913}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="msvcp80.dll"/>
+    <ROW Component="msvcr80.dll" ComponentId="{5669CE0B-1BFD-432E-A359-164C58AA7853}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="msvcr80.dll"/>
+    <ROW Component="nspr4.dll" ComponentId="{B186F565-9DCA-4758-8F02-D48001A09B39}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="nspr4.dll"/>
+    <ROW Component="nss3.dll" ComponentId="{188CBFBE-6418-49CF-8704-81C8FB4DE017}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="nss3.dll"/>
+    <ROW Component="nssckbi.dll" ComponentId="{811977C3-F14E-40D4-96F3-74EDD3EA0982}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="nssckbi.dll"/>
+    <ROW Component="nssdbm3.dll" ComponentId="{A5884875-C028-43D7-BC5F-9F4CE4A4B021}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="nssdbm3.dll"/>
+    <ROW Component="nssutil3.dll" ComponentId="{B446F593-F808-4C97-B0AE-8D4AFD5BEDEA}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="nssutil3.dll"/>
+    <ROW Component="plc4.dll" ComponentId="{2493E3F4-0408-4E49-8FF4-5A9AFE694A6D}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="plc4.dll"/>
+    <ROW Component="plds4.dll" ComponentId="{B0B4756A-4008-4759-B122-5851BEDA14D3}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="plds4.dll"/>
+    <ROW Component="plugin_container.exe" ComponentId="{8989BDCB-D0D7-4A1C-8312-8594C597D31E}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="plugin_container.exe"/>
+    <ROW Component="redit.exe" ComponentId="{D0215196-6822-41C5-B561-B00F44C4A8D1}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="redit.exe"/>
+    <ROW Component="smime3.dll" ComponentId="{CF1DF7C0-F0B3-4B81-ACB5-4649CD780EC4}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="smime3.dll"/>
+    <ROW Component="softokn3.dll" ComponentId="{EF539E2C-F575-42F4-B0DC-7E14DB0CE236}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="softokn3.dll"/>
+    <ROW Component="ssl3.dll" ComponentId="{346EED0A-A505-44D5-B74D-D856E46D557E}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="ssl3.dll"/>
+    <ROW Component="swt_4.2.1.jar" ComponentId="{4774144C-A03E-45FA-9454-04A79AD325BE}" Directory_="RedBee_DIR" Attributes="0" KeyPath="swt_4.2.1.jar" Type="0"/>
+    <ROW Component="updater.exe" ComponentId="{8A83DCF1-3350-454C-A3B4-DDD27A929CB9}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="updater.exe"/>
+    <ROW Component="xpcom.dll" ComponentId="{FFE64932-BA8F-426E-9189-ED50E8A5FEEE}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="xpcom.dll"/>
+    <ROW Component="xpcshell.exe" ComponentId="{86FCAEC4-FD3A-42A3-9F4D-A735F5E65807}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="xpcshell.exe"/>
+    <ROW Component="xul.dll" ComponentId="{2431D451-76F3-486C-BE2B-D77FBD103DDA}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="xul.dll"/>
+    <ROW Component="xulrunner.exe" ComponentId="{BD68EC28-037B-4F11-846F-4ECDD5C2DECC}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="xulrunner.exe"/>
+    <ROW Component="xulrunner_stub.exe" ComponentId="{DC36A909-687D-4C4D-9F90-7137E46C2C9F}" Directory_="xulrunner_DIR" Attributes="0" KeyPath="xulrunner_stub.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="RedBee.exe CodeTool.class icon_16x16.png en.lang jquery_1.8.3.min.js common.css Bookmark.vm Entity_Handler.class BookmarkListPage.class swt_4.2.1.jar config.properties dat log AccessibleMarshal.dll chrome.manifest binary.manifest crashreporter.exe D3DCompiler_43.dll d3dx9_43.dll en_US.aff freebl3.dll IA2Marshal.dll js.exe libEGL.dll libGLESv2.dll mozalloc.dll mozjs.dll mozsqlite3.dll mozutils.dll msvcm80.dll msvcp80.dll msvcr80.dll nspr4.dll nss3.dll nssckbi.dll nssdbm3.dll nssutil3.dll plc4.dll plds4.dll plugin_container.exe redit.exe smime3.dll softokn3.dll ssl3.dll updater.exe xpcom.dll xpcshell.exe xul.dll xulrunner_stub.exe xulrunner.exe SHORTCUTDIR AI_ExePath"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="AccessibleMarshal.dll" Component_="AccessibleMarshal.dll" FileName="Access~1.dll|AccessibleMarshal.dll" Attributes="0" SourcePath="..\ext\xulrunner\AccessibleMarshal.dll" SelfReg="false" Sequence="98"/>
+    <ROW File="Bookmark.vm" Component_="Bookmark.vm" FileName="Bookmark.vm" Attributes="0" SourcePath="..\bin\com\redbee\resource\templates\Bookmark.vm" SelfReg="false" Sequence="22"/>
+    <ROW File="BookmarkList.vm" Component_="Bookmark.vm" FileName="Bookma~1.vm|BookmarkList.vm" Attributes="0" SourcePath="..\bin\com\redbee\resource\templates\BookmarkList.vm" SelfReg="false" Sequence="23"/>
+    <ROW File="BookmarkListPage.class" Component_="BookmarkListPage.class" FileName="Bookma~1.cla|BookmarkListPage.class" Attributes="0" SourcePath="..\bin\com\redbee\web\BookmarkListPage.class" SelfReg="false" Sequence="37"/>
+    <ROW File="BookmarkPage.class" Component_="BookmarkListPage.class" FileName="Bookma~2.cla|BookmarkPage.class" Attributes="0" SourcePath="..\bin\com\redbee\web\BookmarkPage.class" SelfReg="false" Sequence="38"/>
+    <ROW File="CodeTool.class" Component_="CodeTool.class" FileName="CodeTo~1.cla|CodeTool.class" Attributes="0" SourcePath="..\bin\com\redbee\CodeTool.class" SelfReg="false" Sequence="2"/>
+    <ROW File="Config.class" Component_="CodeTool.class" FileName="Config~1.cla|Config.class" Attributes="0" SourcePath="..\bin\com\redbee\Config.class" SelfReg="false" Sequence="3"/>
+    <ROW File="Controller.class" Component_="CodeTool.class" FileName="Contro~1.cla|Controller.class" Attributes="0" SourcePath="..\bin\com\redbee\Controller.class" SelfReg="false" Sequence="4"/>
+    <ROW File="Crypto.class" Component_="CodeTool.class" FileName="Crypto~1.cla|Crypto.class" Attributes="0" SourcePath="..\bin\com\redbee\Crypto.class" SelfReg="false" Sequence="5"/>
+    <ROW File="D3DCompiler_43.dll" Component_="D3DCompiler_43.dll" FileName="D3DCom~1.dll|D3DCompiler_43.dll" Attributes="0" SourcePath="..\ext\xulrunner\D3DCompiler_43.dll" SelfReg="false" Sequence="102"/>
+    <ROW File="Entity.class" Component_="Entity_Handler.class" FileName="Entity~2.cla|Entity.class" Attributes="0" SourcePath="..\bin\com\redbee\schema\Entity.class" SelfReg="false" Sequence="28"/>
+    <ROW File="Entity_Handler.class" Component_="Entity_Handler.class" FileName="Entity~1.cla|Entity$Handler.class" Attributes="0" SourcePath="..\bin\com\redbee\schema\Entity$Handler.class" SelfReg="false" Sequence="27"/>
+    <ROW File="FilePage.class" Component_="BookmarkListPage.class" FileName="FilePa~1.cla|FilePage.class" Attributes="0" SourcePath="..\bin\com\redbee\web\FilePage.class" SelfReg="false" Sequence="39"/>
+    <ROW File="Home.vm" Component_="Bookmark.vm" FileName="Home.vm" Attributes="0" SourcePath="..\bin\com\redbee\resource\templates\Home.vm" SelfReg="false" Sequence="24"/>
+    <ROW File="HomePage.class" Component_="BookmarkListPage.class" FileName="HomePa~1.cla|HomePage.class" Attributes="0" SourcePath="..\bin\com\redbee\web\HomePage.class" SelfReg="false" Sequence="40"/>
+    <ROW File="IA2Marshal.dll" Component_="IA2Marshal.dll" FileName="IA2Mar~1.dll|IA2Marshal.dll" Attributes="0" SourcePath="..\ext\xulrunner\IA2Marshal.dll" SelfReg="false" Sequence="109"/>
+    <ROW File="IOTool.class" Component_="CodeTool.class" FileName="IOTool~1.cla|IOTool.class" Attributes="0" SourcePath="..\bin\com\redbee\IOTool.class" SelfReg="false" Sequence="7"/>
+    <ROW File="Images.class" Component_="CodeTool.class" FileName="Images~1.cla|Images.class" Attributes="0" SourcePath="..\bin\com\redbee\Images.class" SelfReg="false" Sequence="6"/>
+    <ROW File="LICENSE" Component_="chrome.manifest" FileName="LICENSE" Attributes="0" SourcePath="..\ext\xulrunner\LICENSE" SelfReg="false" Sequence="113"/>
+    <ROW File="Labels.class" Component_="CodeTool.class" FileName="Labels~1.cla|Labels.class" Attributes="0" SourcePath="..\bin\com\redbee\Labels.class" SelfReg="false" Sequence="8"/>
+    <ROW File="Labels.properties" Component_="CodeTool.class" FileName="Labels~1.pro|Labels.properties" Attributes="0" SourcePath="..\bin\com\redbee\Labels.properties" SelfReg="false" Sequence="9"/>
+    <ROW File="LuceneHandler.class" Component_="Entity_Handler.class" FileName="Lucene~5.cla|LuceneHandler.class" Attributes="0" SourcePath="..\bin\com\redbee\schema\LuceneHandler.class" SelfReg="false" Sequence="33"/>
+    <ROW File="LuceneHandler_CreateTask.class" Component_="Entity_Handler.class" FileName="Lucene~1.cla|LuceneHandler$CreateTask.class" Attributes="0" SourcePath="..\bin\com\redbee\schema\LuceneHandler$CreateTask.class" SelfReg="false" Sequence="29"/>
+    <ROW File="LuceneHandler_DeleteTask.class" Component_="Entity_Handler.class" FileName="Lucene~2.cla|LuceneHandler$DeleteTask.class" Attributes="0" SourcePath="..\bin\com\redbee\schema\LuceneHandler$DeleteTask.class" SelfReg="false" Sequence="30"/>
+    <ROW File="LuceneHandler_Monitor.class" Component_="Entity_Handler.class" FileName="Lucene~3.cla|LuceneHandler$Monitor.class" Attributes="0" SourcePath="..\bin\com\redbee\schema\LuceneHandler$Monitor.class" SelfReg="false" Sequence="31"/>
+    <ROW File="LuceneHandler_UpdateTask.class" Component_="Entity_Handler.class" FileName="Lucene~4.cla|LuceneHandler$UpdateTask.class" Attributes="0" SourcePath="..\bin\com\redbee\schema\LuceneHandler$UpdateTask.class" SelfReg="false" Sequence="32"/>
+    <ROW File="MainWindow.class" Component_="CodeTool.class" FileName="MainWi~7.cla|MainWindow.class" Attributes="0" SourcePath="..\bin\com\redbee\MainWindow.class" SelfReg="false" Sequence="16"/>
+    <ROW File="MainWindow_1.class" Component_="CodeTool.class" FileName="MainWi~2.cla|MainWindow$1.class" Attributes="0" SourcePath="..\bin\com\redbee\MainWindow$1.class" SelfReg="false" Sequence="11"/>
+    <ROW File="MainWindow_1_1.class" Component_="CodeTool.class" FileName="MainWi~1.cla|MainWindow$1$1.class" Attributes="0" SourcePath="..\bin\com\redbee\MainWindow$1$1.class" SelfReg="false" Sequence="10"/>
+    <ROW File="MainWindow_2.class" Component_="CodeTool.class" FileName="MainWi~3.cla|MainWindow$2.class" Attributes="0" SourcePath="..\bin\com\redbee\MainWindow$2.class" SelfReg="false" Sequence="12"/>
+    <ROW File="MainWindow_3.class" Component_="CodeTool.class" FileName="MainWi~4.cla|MainWindow$3.class" Attributes="0" SourcePath="..\bin\com\redbee\MainWindow$3.class" SelfReg="false" Sequence="13"/>
+    <ROW File="MainWindow_HomeTask.class" Component_="CodeTool.class" FileName="MainWi~6.cla|MainWindow$HomeTask.class" Attributes="0" SourcePath="..\bin\com\redbee\MainWindow$HomeTask.class" SelfReg="false" Sequence="15"/>
+    <ROW File="MainWindow_HomeTask_1.class" Component_="CodeTool.class" FileName="MainWi~5.cla|MainWindow$HomeTask$1.class" Attributes="0" SourcePath="..\bin\com\redbee\MainWindow$HomeTask$1.class" SelfReg="false" Sequence="14"/>
+    <ROW File="Microsoft.VC80.CRT.manifest" Component_="chrome.manifest" FileName="Micros~1.man|Microsoft.VC80.CRT.manifest" Attributes="0" SourcePath="..\ext\xulrunner\Microsoft.VC80.CRT.manifest" SelfReg="false" Sequence="114"/>
+    <ROW File="Page.class" Component_="BookmarkListPage.class" FileName="Page~1.cla|Page.class" Attributes="0" SourcePath="..\bin\com\redbee\web\Page.class" SelfReg="false" Sequence="42"/>
+    <ROW File="PageSaver.class" Component_="CodeTool.class" FileName="PageSa~1.cla|PageSaver.class" Attributes="0" SourcePath="..\bin\com\redbee\PageSaver.class" SelfReg="false" Sequence="17"/>
+    <ROW File="Page_PageTool.class" Component_="BookmarkListPage.class" FileName="Page$P~1.cla|Page$PageTool.class" Attributes="0" SourcePath="..\bin\com\redbee\web\Page$PageTool.class" SelfReg="false" Sequence="41"/>
+    <ROW File="README.txt" Component_="chrome.manifest" FileName="README.txt" Attributes="0" SourcePath="..\ext\xulrunner\README.txt" SelfReg="false" Sequence="133"/>
+    <ROW File="RedBee.exe" Component_="RedBee.exe" FileName="RedBee.exe" Attributes="0" SourcePath="&lt;AI_STUBS&gt;aijclw.exe" SelfReg="false" Sequence="1" DigSign="true"/>
+    <ROW File="Router.class" Component_="BookmarkListPage.class" FileName="Router~1.cla|Router.class" Attributes="0" SourcePath="..\bin\com\redbee\web\Router.class" SelfReg="false" Sequence="43"/>
+    <ROW File="Runner.class" Component_="CodeTool.class" FileName="Runner~1.cla|Runner.class" Attributes="0" SourcePath="..\bin\com\redbee\Runner.class" SelfReg="false" Sequence="26"/>
+    <ROW File="Search.vm" Component_="Bookmark.vm" FileName="Search.vm" Attributes="0" SourcePath="..\bin\com\redbee\resource\templates\Search.vm" SelfReg="false" Sequence="25"/>
+    <ROW File="SearchPage.class" Component_="BookmarkListPage.class" FileName="Search~2.cla|SearchPage.class" Attributes="0" SourcePath="..\bin\com\redbee\web\SearchPage.class" SelfReg="false" Sequence="45"/>
+    <ROW File="SearchPage_Result.class" Component_="BookmarkListPage.class" FileName="Search~1.cla|SearchPage$Result.class" Attributes="0" SourcePath="..\bin\com\redbee\web\SearchPage$Result.class" SelfReg="false" Sequence="44"/>
+    <ROW File="TaskManager.class" Component_="CodeTool.class" FileName="TaskMa~2.cla|TaskManager.class" Attributes="0" SourcePath="..\bin\com\redbee\TaskManager.class" SelfReg="false" Sequence="35"/>
+    <ROW File="TaskManager_CleanThread.class" Component_="CodeTool.class" FileName="TaskMa~1.cla|TaskManager$CleanThread.class" Attributes="0" SourcePath="..\bin\com\redbee\TaskManager$CleanThread.class" SelfReg="false" Sequence="34"/>
+    <ROW File="UITool.class" Component_="CodeTool.class" FileName="UITool~1.cla|UITool.class" Attributes="0" SourcePath="..\bin\com\redbee\UITool.class" SelfReg="false" Sequence="36"/>
+    <ROW File="WebServer.class" Component_="CodeTool.class" FileName="WebSer~2.cla|WebServer.class" Attributes="0" SourcePath="..\bin\com\redbee\WebServer.class" SelfReg="false" Sequence="47"/>
+    <ROW File="WebServer_Servlet404.class" Component_="CodeTool.class" FileName="WebSer~1.cla|WebServer$Servlet404.class" Attributes="0" SourcePath="..\bin\com\redbee\WebServer$Servlet404.class" SelfReg="false" Sequence="46"/>
+    <ROW File="Window.class" Component_="CodeTool.class" FileName="Windo~32.cla|Window.class" Attributes="0" SourcePath="..\bin\com\redbee\Window.class" SelfReg="false" Sequence="79"/>
+    <ROW File="Window_1.class" Component_="CodeTool.class" FileName="Window~1.cla|Window$1.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$1.class" SelfReg="false" Sequence="48"/>
+    <ROW File="Window_10.class" Component_="CodeTool.class" FileName="Window~2.cla|Window$10.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$10.class" SelfReg="false" Sequence="49"/>
+    <ROW File="Window_11.class" Component_="CodeTool.class" FileName="Window~3.cla|Window$11.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$11.class" SelfReg="false" Sequence="50"/>
+    <ROW File="Window_12.class" Component_="CodeTool.class" FileName="Window~4.cla|Window$12.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$12.class" SelfReg="false" Sequence="51"/>
+    <ROW File="Window_13.class" Component_="CodeTool.class" FileName="Window~5.cla|Window$13.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$13.class" SelfReg="false" Sequence="52"/>
+    <ROW File="Window_14.class" Component_="CodeTool.class" FileName="Window~6.cla|Window$14.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$14.class" SelfReg="false" Sequence="53"/>
+    <ROW File="Window_15.class" Component_="CodeTool.class" FileName="Window~7.cla|Window$15.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$15.class" SelfReg="false" Sequence="54"/>
+    <ROW File="Window_16.class" Component_="CodeTool.class" FileName="Window~8.cla|Window$16.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$16.class" SelfReg="false" Sequence="55"/>
+    <ROW File="Window_17.class" Component_="CodeTool.class" FileName="Window~9.cla|Window$17.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$17.class" SelfReg="false" Sequence="56"/>
+    <ROW File="Window_18.class" Component_="CodeTool.class" FileName="Windo~10.cla|Window$18.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$18.class" SelfReg="false" Sequence="57"/>
+    <ROW File="Window_19.class" Component_="CodeTool.class" FileName="Windo~11.cla|Window$19.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$19.class" SelfReg="false" Sequence="58"/>
+    <ROW File="Window_2.class" Component_="CodeTool.class" FileName="Windo~12.cla|Window$2.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$2.class" SelfReg="false" Sequence="59"/>
+    <ROW File="Window_20.class" Component_="CodeTool.class" FileName="Windo~13.cla|Window$20.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$20.class" SelfReg="false" Sequence="60"/>
+    <ROW File="Window_21.class" Component_="CodeTool.class" FileName="Windo~14.cla|Window$21.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$21.class" SelfReg="false" Sequence="61"/>
+    <ROW File="Window_22.class" Component_="CodeTool.class" FileName="Windo~15.cla|Window$22.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$22.class" SelfReg="false" Sequence="62"/>
+    <ROW File="Window_23.class" Component_="CodeTool.class" FileName="Windo~16.cla|Window$23.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$23.class" SelfReg="false" Sequence="63"/>
+    <ROW File="Window_24.class" Component_="CodeTool.class" FileName="Windo~17.cla|Window$24.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$24.class" SelfReg="false" Sequence="64"/>
+    <ROW File="Window_25.class" Component_="CodeTool.class" FileName="Windo~18.cla|Window$25.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$25.class" SelfReg="false" Sequence="65"/>
+    <ROW File="Window_3.class" Component_="CodeTool.class" FileName="Windo~19.cla|Window$3.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$3.class" SelfReg="false" Sequence="66"/>
+    <ROW File="Window_4.class" Component_="CodeTool.class" FileName="Windo~20.cla|Window$4.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$4.class" SelfReg="false" Sequence="67"/>
+    <ROW File="Window_5.class" Component_="CodeTool.class" FileName="Windo~21.cla|Window$5.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$5.class" SelfReg="false" Sequence="68"/>
+    <ROW File="Window_6.class" Component_="CodeTool.class" FileName="Windo~23.cla|Window$6.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$6.class" SelfReg="false" Sequence="70"/>
+    <ROW File="Window_6_1.class" Component_="CodeTool.class" FileName="Windo~22.cla|Window$6$1.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$6$1.class" SelfReg="false" Sequence="69"/>
+    <ROW File="Window_7.class" Component_="CodeTool.class" FileName="Windo~25.cla|Window$7.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$7.class" SelfReg="false" Sequence="72"/>
+    <ROW File="Window_7_1.class" Component_="CodeTool.class" FileName="Windo~24.cla|Window$7$1.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$7$1.class" SelfReg="false" Sequence="71"/>
+    <ROW File="Window_8.class" Component_="CodeTool.class" FileName="Windo~26.cla|Window$8.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$8.class" SelfReg="false" Sequence="73"/>
+    <ROW File="Window_9.class" Component_="CodeTool.class" FileName="Windo~27.cla|Window$9.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$9.class" SelfReg="false" Sequence="74"/>
+    <ROW File="Window_CustomFunction.class" Component_="CodeTool.class" FileName="Windo~29.cla|Window$CustomFunction.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$CustomFunction.class" SelfReg="false" Sequence="76"/>
+    <ROW File="Window_CustomFunction_1.class" Component_="CodeTool.class" FileName="Windo~28.cla|Window$CustomFunction$1.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$CustomFunction$1.class" SelfReg="false" Sequence="75"/>
+    <ROW File="Window_OpenWindowTask.class" Component_="CodeTool.class" FileName="Windo~31.cla|Window$OpenWindowTask.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$OpenWindowTask.class" SelfReg="false" Sequence="78"/>
+    <ROW File="Window_OpenWindowTask_1.class" Component_="CodeTool.class" FileName="Windo~30.cla|Window$OpenWindowTask$1.class" Attributes="0" SourcePath="..\bin\com\redbee\Window$OpenWindowTask$1.class" SelfReg="false" Sequence="77"/>
+    <ROW File="binary.manifest" Component_="binary.manifest" FileName="binary~1.man|binary.manifest" Attributes="0" SourcePath="..\ext\xulrunner\components\binary.manifest" SelfReg="false" Sequence="100"/>
+    <ROW File="chrome.manifest" Component_="chrome.manifest" FileName="chrome~1.man|chrome.manifest" Attributes="0" SourcePath="..\ext\xulrunner\chrome.manifest" SelfReg="false" Sequence="99"/>
+    <ROW File="common.css" Component_="common.css" FileName="common.css" Attributes="0" SourcePath="..\bin\com\redbee\resource\styles\common.css" SelfReg="false" Sequence="21"/>
+    <ROW File="config.properties" Component_="config.properties" FileName="config~1.pro|config.properties" Attributes="0" SourcePath="..\cfg\config.properties" SelfReg="false" Sequence="96"/>
+    <ROW File="crashreporter.exe" Component_="crashreporter.exe" FileName="crashr~1.exe|crashreporter.exe" Attributes="0" SourcePath="..\ext\xulrunner\crashreporter.exe" SelfReg="false" Sequence="101"/>
+    <ROW File="d3dx9_43.dll" Component_="d3dx9_43.dll" FileName="d3dx9_43.dll" Attributes="0" SourcePath="..\ext\xulrunner\d3dx9_43.dll" SelfReg="false" Sequence="103"/>
+    <ROW File="dependentlibs.list" Component_="chrome.manifest" FileName="depend~1.lis|dependentlibs.list" Attributes="0" SourcePath="..\ext\xulrunner\dependentlibs.list" SelfReg="false" Sequence="104"/>
+    <ROW File="dsn.jar" Component_="swt_4.2.1.jar" FileName="dsn.jar" Attributes="0" SourcePath="..\lib\javamail\dsn.jar" SelfReg="false" Sequence="90"/>
+    <ROW File="en.lang" Component_="en.lang" FileName="en~1.lan|en.lang" Attributes="0" SourcePath="..\bin\com\redbee\resource\languages\en.lang" SelfReg="false" Sequence="19"/>
+    <ROW File="en_US.aff" Component_="en_US.aff" FileName="en-US.aff" Attributes="0" SourcePath="..\ext\xulrunner\dictionaries\en-US.aff" SelfReg="false" Sequence="105"/>
+    <ROW File="en_US.dic" Component_="en_US.aff" FileName="en-US.dic" Attributes="0" SourcePath="..\ext\xulrunner\dictionaries\en-US.dic" SelfReg="false" Sequence="106"/>
+    <ROW File="freebl3.chk" Component_="chrome.manifest" FileName="freebl3.chk" Attributes="0" SourcePath="..\ext\xulrunner\freebl3.chk" SelfReg="false" Sequence="107"/>
+    <ROW File="freebl3.dll" Component_="freebl3.dll" FileName="freebl3.dll" Attributes="0" SourcePath="..\ext\xulrunner\freebl3.dll" SelfReg="false" Sequence="108"/>
+    <ROW File="icon_16x16.png" Component_="icon_16x16.png" FileName="icon-1~1.png|icon-16x16.png" Attributes="0" SourcePath="..\bin\com\redbee\resource\images\icon-16x16.png" SelfReg="false" Sequence="18"/>
+    <ROW File="imap.jar" Component_="swt_4.2.1.jar" FileName="imap.jar" Attributes="0" SourcePath="..\lib\javamail\imap.jar" SelfReg="false" Sequence="91"/>
+    <ROW File="jetty_6.1.26.jar" Component_="swt_4.2.1.jar" FileName="jetty-~1.jar|jetty-6.1.26.jar" Attributes="0" SourcePath="..\lib\jetty\jetty-6.1.26.jar" SelfReg="false" Sequence="84"/>
+    <ROW File="jetty_util_6.1.26.jar" Component_="swt_4.2.1.jar" FileName="jetty-~2.jar|jetty-util-6.1.26.jar" Attributes="0" SourcePath="..\lib\jetty\jetty-util-6.1.26.jar" SelfReg="false" Sequence="85"/>
+    <ROW File="jquery_1.8.3.min.js" Component_="jquery_1.8.3.min.js" FileName="jquery~1.js|jquery-1.8.3.min.js" Attributes="0" SourcePath="..\bin\com\redbee\resource\scripts\jquery-1.8.3.min.js" SelfReg="false" Sequence="20"/>
+    <ROW File="js.exe" Component_="js.exe" FileName="js.exe" Attributes="0" SourcePath="..\ext\xulrunner\js.exe" SelfReg="false" Sequence="110"/>
+    <ROW File="jsoup_1.7.1.jar" Component_="swt_4.2.1.jar" FileName="jsoup-~1.jar|jsoup-1.7.1.jar" Attributes="0" SourcePath="..\lib\jsoup\jsoup-1.7.1.jar" SelfReg="false" Sequence="82"/>
+    <ROW File="libEGL.dll" Component_="libEGL.dll" FileName="libEGL.dll" Attributes="0" SourcePath="..\ext\xulrunner\libEGL.dll" SelfReg="false" Sequence="111"/>
+    <ROW File="libGLESv2.dll" Component_="libGLESv2.dll" FileName="libGLE~1.dll|libGLESv2.dll" Attributes="0" SourcePath="..\ext\xulrunner\libGLESv2.dll" SelfReg="false" Sequence="112"/>
+    <ROW File="log4j_1.2.17.jar" Component_="swt_4.2.1.jar" FileName="log4j-~1.jar|log4j-1.2.17.jar" Attributes="0" SourcePath="..\lib\log4j\log4j-1.2.17.jar" SelfReg="false" Sequence="81"/>
+    <ROW File="log_conf.xml" Component_="config.properties" FileName="log-conf.xml" Attributes="0" SourcePath="..\cfg\log-conf.xml" SelfReg="false" Sequence="97"/>
+    <ROW File="lucene_core_3.6.1.jar" Component_="swt_4.2.1.jar" FileName="lucene~1.jar|lucene-core-3.6.1.jar" Attributes="0" SourcePath="..\lib\lucene\lucene-core-3.6.1.jar" SelfReg="false" Sequence="86"/>
+    <ROW File="lucene_highlighter_3.6.1.jar" Component_="swt_4.2.1.jar" FileName="lucene~3.jar|lucene-highlighter-3.6.1.jar" Attributes="0" SourcePath="..\lib\lucene\lucene-highlighter-3.6.1.jar" SelfReg="false" Sequence="88"/>
+    <ROW File="lucene_memory_3.6.1.jar" Component_="swt_4.2.1.jar" FileName="lucene~2.jar|lucene-memory-3.6.1.jar" Attributes="0" SourcePath="..\lib\lucene\lucene-memory-3.6.1.jar" SelfReg="false" Sequence="87"/>
+    <ROW File="mail.jar" Component_="swt_4.2.1.jar" FileName="mail.jar" Attributes="0" SourcePath="..\lib\javamail\mail.jar" SelfReg="false" Sequence="92"/>
+    <ROW File="mailapi.jar" Component_="swt_4.2.1.jar" FileName="mailapi.jar" Attributes="0" SourcePath="..\lib\javamail\mailapi.jar" SelfReg="false" Sequence="93"/>
+    <ROW File="mozalloc.dll" Component_="mozalloc.dll" FileName="mozalloc.dll" Attributes="0" SourcePath="..\ext\xulrunner\mozalloc.dll" SelfReg="false" Sequence="115"/>
+    <ROW File="mozjs.dll" Component_="mozjs.dll" FileName="mozjs.dll" Attributes="0" SourcePath="..\ext\xulrunner\mozjs.dll" SelfReg="false" Sequence="116"/>
+    <ROW File="mozsqlite3.dll" Component_="mozsqlite3.dll" FileName="mozsql~1.dll|mozsqlite3.dll" Attributes="0" SourcePath="..\ext\xulrunner\mozsqlite3.dll" SelfReg="false" Sequence="117"/>
+    <ROW File="mozutils.dll" Component_="mozutils.dll" FileName="mozutils.dll" Attributes="0" SourcePath="..\ext\xulrunner\mozutils.dll" SelfReg="false" Sequence="118"/>
+    <ROW File="msvcm80.dll" Component_="msvcm80.dll" FileName="msvcm80.dll" Attributes="0" SourcePath="..\ext\xulrunner\msvcm80.dll" SelfReg="false" Sequence="119"/>
+    <ROW File="msvcp80.dll" Component_="msvcp80.dll" FileName="msvcp80.dll" Attributes="0" SourcePath="..\ext\xulrunner\msvcp80.dll" SelfReg="false" Sequence="120"/>
+    <ROW File="msvcr80.dll" Component_="msvcr80.dll" FileName="msvcr80.dll" Attributes="0" SourcePath="..\ext\xulrunner\msvcr80.dll" SelfReg="false" Sequence="121"/>
+    <ROW File="nspr4.dll" Component_="nspr4.dll" FileName="nspr4.dll" Attributes="0" SourcePath="..\ext\xulrunner\nspr4.dll" SelfReg="false" Sequence="122"/>
+    <ROW File="nss3.dll" Component_="nss3.dll" FileName="nss3.dll" Attributes="0" SourcePath="..\ext\xulrunner\nss3.dll" SelfReg="false" Sequence="123"/>
+    <ROW File="nssckbi.dll" Component_="nssckbi.dll" FileName="nssckbi.dll" Attributes="0" SourcePath="..\ext\xulrunner\nssckbi.dll" SelfReg="false" Sequence="124"/>
+    <ROW File="nssdbm3.chk" Component_="chrome.manifest" FileName="nssdbm3.chk" Attributes="0" SourcePath="..\ext\xulrunner\nssdbm3.chk" SelfReg="false" Sequence="125"/>
+    <ROW File="nssdbm3.dll" Component_="nssdbm3.dll" FileName="nssdbm3.dll" Attributes="0" SourcePath="..\ext\xulrunner\nssdbm3.dll" SelfReg="false" Sequence="126"/>
+    <ROW File="nssutil3.dll" Component_="nssutil3.dll" FileName="nssutil3.dll" Attributes="0" SourcePath="..\ext\xulrunner\nssutil3.dll" SelfReg="false" Sequence="127"/>
+    <ROW File="omni.ja" Component_="chrome.manifest" FileName="omni.ja" Attributes="0" SourcePath="..\ext\xulrunner\omni.ja" SelfReg="false" Sequence="128"/>
+    <ROW File="plc4.dll" Component_="plc4.dll" FileName="plc4.dll" Attributes="0" SourcePath="..\ext\xulrunner\plc4.dll" SelfReg="false" Sequence="129"/>
+    <ROW File="plds4.dll" Component_="plds4.dll" FileName="plds4.dll" Attributes="0" SourcePath="..\ext\xulrunner\plds4.dll" SelfReg="false" Sequence="130"/>
+    <ROW File="plugin_container.exe" Component_="plugin_container.exe" FileName="plugin~1.exe|plugin-container.exe" Attributes="0" SourcePath="..\ext\xulrunner\plugin-container.exe" SelfReg="false" Sequence="131"/>
+    <ROW File="pop3.jar" Component_="swt_4.2.1.jar" FileName="pop3.jar" Attributes="0" SourcePath="..\lib\javamail\pop3.jar" SelfReg="false" Sequence="94"/>
+    <ROW File="precomplete" Component_="chrome.manifest" FileName="precom~1|precomplete" Attributes="0" SourcePath="..\ext\xulrunner\precomplete" SelfReg="false" Sequence="132"/>
+    <ROW File="redit.exe" Component_="redit.exe" FileName="redit.exe" Attributes="0" SourcePath="..\ext\xulrunner\redit.exe" SelfReg="false" Sequence="134"/>
+    <ROW File="servlet_api_2.5_20081211.jar" Component_="swt_4.2.1.jar" FileName="servle~1.jar|servlet-api-2.5-20081211.jar" Attributes="0" SourcePath="..\lib\jetty\servlet-api-2.5-20081211.jar" SelfReg="false" Sequence="83"/>
+    <ROW File="smime3.dll" Component_="smime3.dll" FileName="smime3.dll" Attributes="0" SourcePath="..\ext\xulrunner\smime3.dll" SelfReg="false" Sequence="135"/>
+    <ROW File="smtp.jar" Component_="swt_4.2.1.jar" FileName="smtp.jar" Attributes="0" SourcePath="..\lib\javamail\smtp.jar" SelfReg="false" Sequence="89"/>
+    <ROW File="softokn3.chk" Component_="chrome.manifest" FileName="softokn3.chk" Attributes="0" SourcePath="..\ext\xulrunner\softokn3.chk" SelfReg="false" Sequence="136"/>
+    <ROW File="softokn3.dll" Component_="softokn3.dll" FileName="softokn3.dll" Attributes="0" SourcePath="..\ext\xulrunner\softokn3.dll" SelfReg="false" Sequence="137"/>
+    <ROW File="ssl3.dll" Component_="ssl3.dll" FileName="ssl3.dll" Attributes="0" SourcePath="..\ext\xulrunner\ssl3.dll" SelfReg="false" Sequence="138"/>
+    <ROW File="swt_4.2.1.jar" Component_="swt_4.2.1.jar" FileName="swt-42~1.jar|swt-4.2.1.jar" Attributes="0" SourcePath="..\lib\swt\swt-4.2.1.jar" SelfReg="false" Sequence="80"/>
+    <ROW File="update.locale" Component_="chrome.manifest" FileName="update~1.loc|update.locale" Attributes="0" SourcePath="..\ext\xulrunner\update.locale" SelfReg="false" Sequence="139"/>
+    <ROW File="updater.exe" Component_="updater.exe" FileName="updater.exe" Attributes="0" SourcePath="..\ext\xulrunner\updater.exe" SelfReg="false" Sequence="140"/>
+    <ROW File="velocity_1.7_dep.jar" Component_="swt_4.2.1.jar" FileName="veloci~1.jar|velocity-1.7-dep.jar" Attributes="0" SourcePath="..\lib\velocity\velocity-1.7-dep.jar" SelfReg="false" Sequence="95"/>
+    <ROW File="xpcom.dll" Component_="xpcom.dll" FileName="xpcom.dll" Attributes="0" SourcePath="..\ext\xulrunner\xpcom.dll" SelfReg="false" Sequence="141"/>
+    <ROW File="xpcshell.exe" Component_="xpcshell.exe" FileName="xpcshell.exe" Attributes="0" SourcePath="..\ext\xulrunner\xpcshell.exe" SelfReg="false" Sequence="142"/>
+    <ROW File="xul.dll" Component_="xul.dll" FileName="xul.dll" Attributes="0" SourcePath="..\ext\xulrunner\xul.dll" SelfReg="false" Sequence="143"/>
+    <ROW File="xulrunner.exe" Component_="xulrunner.exe" FileName="xulrun~2.exe|xulrunner.exe" Attributes="0" SourcePath="..\ext\xulrunner\xulrunner.exe" SelfReg="false" Sequence="145"/>
+    <ROW File="xulrunner_stub.exe" Component_="xulrunner_stub.exe" FileName="xulrun~1.exe|xulrunner-stub.exe" Attributes="0" SourcePath="..\ext\xulrunner\xulrunner-stub.exe" SelfReg="false" Sequence="144"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="1" Languages="en" InstallationType="4" CabsLocation="1" PackageType="1" FilesInsideExe="true" ExeIconPath="RedBee.ico" ExtractionFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\install" ExeName="RedBee_Installer"/>
+    <ATTRIBUTE name="CurrentBuild" value="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_FRAGS&gt;FolderDlg.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_FRAGS&gt;UI.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
+    <ROW Action="AI_DeleteLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_DeleteRLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractLzma" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_CU" Builds="DefaultBuild"/>
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_LM" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+    <ROW Name="banner_image.jpg" SourcePath="&lt;AI_RES&gt;banner-image.jpg"/>
+    <ROW Name="dialog_image.jpg" SourcePath="&lt;AI_RES&gt;dialog-image.jpg"/>
+    <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
+    <ATTRIBUTE name="FixedSizeBitmaps" value="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="3"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="2"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="3"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="dat_DIR" Component_="dat"/>
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR"/>
+    <ROW Directory_="log_DIR" Component_="log"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DeleteRCadLzma" Type="51" Source="AI_DeleteRLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteRLzma" Type="1281" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DetectJRE" Type="1" Source="aicustact.dll" Target="RequiredJreExists"/>
+    <ROW Action="AI_ExtractCadLzma" Type="51" Source="AI_ExtractLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_ExtractLzma" Type="1025" Source="lzmaextractor.dll" Target="ExtractLZMAFiles"/>
+    <ROW Action="AI_FindExeLzma" Type="1" Source="lzmaextractor.dll" Target="FindEXE"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="RedBee.exe" SourcePath="RedBee.ico" Index="0"/>
+    <ROW Name="SystemFolder_msiexec.exe" SourcePath="&lt;AI_RES&gt;uninstall.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIniFileComponent">
+    <ROW IniFile="Application_Type" FileName="RedBee.ini" DirProperty="APPDIR" Section="Application" Key="Application Type" Value="gui" Action="0" Component_="RedBee.exe"/>
+    <ROW IniFile="BuildID" FileName="platform.ini" DirProperty="xulrunner_DIR" Section="Build" Key="BuildID" Value="20120129021758" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="CheckAllowEmail" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="CheckAllowEmail" Value="Allow %s to contact me about this report" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="CheckIncludeURL" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="CheckIncludeURL" Value="Include the address of the page I was on" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="CheckSendReport" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="CheckSendReport" Value="Tell %s about this crash so they can fix it" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="Class_Path" FileName="RedBee.ini" DirProperty="APPDIR" Section="Class Path" Key="Class Path" Value="[RedBee_DIR];[#swt_4.2.1.jar];[#log4j_1.2.17.jar];[#jsoup_1.7.1.jar];[#servlet_api_2.5_20081211.jar];[#jetty_6.1.26.jar];[#jetty_util_6.1.26.jar];[#lucene_core_3.6.1.jar];[#lucene_memory_3.6.1.jar];[#lucene_highlighter_3.6.1.jar];[#smtp.jar];[#dsn.jar];[#imap.jar];[#mail.jar];[#mailapi.jar];[#pop3.jar];[#velocity_1.7_dep.jar];" Action="0" Component_="RedBee.exe"/>
+    <ROW IniFile="Close" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="Close" Value="Close" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="CommentGrayText" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="CommentGrayText" Value="Add a comment (comments are publicly visible)" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="CrashDetailsURL" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="CrashDetailsURL" Value="You can view details of this crash at %s" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="CrashID" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="CrashID" Value="Crash ID: %s" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="CrashReporterDefault" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="CrashReporterDefault" Value="This application is run after a crash to report the problem to the application vendor.  It should not be run directly." Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="CrashReporterDescriptionText2" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="CrashReporterDescriptionText2" Value="%s had a problem and crashed.\n\nTo help us diagnose and fix the problem, you can send us a crash report." Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="CrashReporterErrorText" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="CrashReporterErrorText" Value="The application had a problem and crashed.\n\nUnfortunately, the crash reporter is unable to submit a report for this crash.\n\nDetails: %s" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="CrashReporterProductErrorText2" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="CrashReporterProductErrorText2" Value="%s had a problem and crashed.\n\nUnfortunately, the crash reporter is unable to submit a crash report.\n\nDetails: %s" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="CrashReporterSorry" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="CrashReporterSorry" Value="We&apos;re Sorry" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="CrashReporterTitle" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="CrashReporterTitle" Value="Crash Reporter" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="CrashReporterVendorTitle" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="CrashReporterVendorTitle" Value="%s Crash Reporter" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="Details" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="Details" Value="Detailsâ€¦" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="EmailGrayText" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="EmailGrayText" Value="Enter your email address here" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="ErrorBadArguments" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="ErrorBadArguments" Value="The application passed an invalid argument." Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="ErrorCreateDumpDir" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="ErrorCreateDumpDir" Value="Couldn&apos;t create pending dump directory." Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="ErrorDumpFileExists" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="ErrorDumpFileExists" Value="The application did not leave a crash dump file." Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="ErrorDumpFileMove" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="ErrorDumpFileMove" Value="Couldn&apos;t move crash dump." Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="ErrorEndOfLife" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="ErrorEndOfLife" Value="The version of %s you are using is no longer supported. Crash reports are no longer being accepted for this version. Please consider upgrading to a supported version." Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="ErrorExtraFileExists" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="ErrorExtraFileExists" Value="The application didn&apos;t leave an application data file." Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="ErrorExtraFileMove" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="ErrorExtraFileMove" Value="Couldn&apos;t move application data file." Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="ErrorExtraFileRead" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="ErrorExtraFileRead" Value="Couldn&apos;t read the application data file." Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="ErrorNoProductName" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="ErrorNoProductName" Value="The application did not identify itself." Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="ErrorNoServerURL" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="ErrorNoServerURL" Value="The application did not specify a crash reporting server." Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="ErrorNoSettingsPath" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="ErrorNoSettingsPath" Value="Couldn&apos;t find the crash reporter&apos;s settings." Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="ExtraReportInfo" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="ExtraReportInfo" Value="This report also contains technical information about the state of the application when it crashed." Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="Failure_Check" FileName="RedBee.ini" DirProperty="APPDIR" Section="Application" Key="Failure Check" Value="yes" Action="0" Component_="RedBee.exe"/>
+    <ROW IniFile="LOCALIZATION_NOTE_CheckSendReport_The_s_is_replaced_with_the_vendor_name" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="# LOCALIZATION NOTE (CheckSendReport): The %s is replaced with the vendor name." Value="# LOCALIZATION NOTE (CheckSendReport): The %s is replaced with the vendor name." Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="LOCALIZATION_NOTE_CrashDetailsURL_The_s_is_replaced_with_a_URL_that_the_" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="# LOCALIZATION NOTE (CrashDetailsURL): The %s is replaced with a URL that the user can visit to view the crash details." Value="# LOCALIZATION NOTE (CrashDetailsURL): The %s is replaced with a URL that the user can visit to view the crash details." Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="LOCALIZATION_NOTE_CrashID_The_s_is_replaced_with_the_Crash_ID_from_the_s" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="# LOCALIZATION NOTE (CrashID): The %s is replaced with the Crash ID from the server, which is a string like abc12345-6789-0abc-def1-23456abcdef1" Value="# LOCALIZATION NOTE (CrashID): The %s is replaced with the Crash ID from the server, which is a string like abc12345-6789-0abc-def1-23456abcdef1" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="LOCALIZATION_NOTE_CrashReporterDescriptionText2_The_s_is_replaced_with_t" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="# LOCALIZATION NOTE (CrashReporterDescriptionText2): The %s is replaced with the product name." Value="# LOCALIZATION NOTE (CrashReporterDescriptionText2): The %s is replaced with the product name." Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="LOCALIZATION_NOTE_CrashReporterErrorText_s_is_replaced_with_another_stri" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="# LOCALIZATION NOTE (CrashReporterErrorText): %s is replaced with another string containing detailed information." Value="# LOCALIZATION NOTE (CrashReporterErrorText): %s is replaced with another string containing detailed information." Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="LOCALIZATION_NOTE_CrashReporterProductErrorText2_The_first_s_is_replaced" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="# LOCALIZATION NOTE (CrashReporterProductErrorText2): The first %s is replaced with the product name (i.e. &quot;Firefox&quot;), the second is replaced with another string containing detailed information.  These two substitutions can not be reordered!" Value="# LOCALIZATION NOTE (CrashReporterProductErrorText2): The first %s is replaced with the product name (i.e. &quot;Firefox&quot;), the second is replaced with another string containing detailed information.  These two substitutions can not be reordered!" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="LOCALIZATION_NOTE_CrashReporterVendorTitle_s_is_replaced_with_the_vendor" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="# LOCALIZATION NOTE (CrashReporterVendorTitle): %s is replaced with the vendor name.  (i.e. &quot;Mozilla&quot;)" Value="# LOCALIZATION NOTE (CrashReporterVendorTitle): %s is replaced with the vendor name.  (i.e. &quot;Mozilla&quot;)" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="LOCALIZATION_NOTE_ErrorEndOfLife_The_s_is_replaced_with_the_product_name" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="# LOCALIZATION NOTE (ErrorEndOfLife): The %s is replaced with the product name." Value="# LOCALIZATION NOTE (ErrorEndOfLife): The %s is replaced with the product name." Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="LOCALIZATION_NOTE_Quit2_The_s_is_replaced_with_the_product_name." FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="# LOCALIZATION NOTE (Quit2): The %s is replaced with the product name." Value="# LOCALIZATION NOTE (Quit2): The %s is replaced with the product name." Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="LOCALIZATION_NOTE_Restart_The_s_is_replaced_with_the_product_name." FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="# LOCALIZATION NOTE (Restart): The %s is replaced with the product name." Value="# LOCALIZATION NOTE (Restart): The %s is replaced with the product name." Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="LOCALIZATION_NOTE_isRTL" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="# LOCALIZATION NOTE (isRTL):" Value="# LOCALIZATION NOTE (isRTL):" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="Leave_this_entry_empty_unless_your_language_requires_right_to_left_layou" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="# Leave this entry empty unless your language requires right-to-left layout," Value="# Leave this entry empty unless your language requires right-to-left layout," Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="Main_Class" FileName="RedBee.ini" DirProperty="APPDIR" Section="Java Runtime Environment" Key="Main Class" Value="com.redbee.Runner" Action="0" Component_="RedBee.exe"/>
+    <ROW IniFile="Maximum_Version" FileName="RedBee.ini" DirProperty="APPDIR" Section="Java Runtime Environment" Key="Maximum Version" Value="any" Action="0" Component_="RedBee.exe"/>
+    <ROW IniFile="Milestone" FileName="platform.ini" DirProperty="xulrunner_DIR" Section="Build" Key="Milestone" Value="10.0" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="Minimum_Version" FileName="RedBee.ini" DirProperty="APPDIR" Section="Java Runtime Environment" Key="Minimum Version" Value="1.6" Action="0" Component_="RedBee.exe"/>
+    <ROW IniFile="Ok" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="Ok" Value="OK" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="Quit2" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="Quit2" Value="Quit %s" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="ReportDuringSubmit2" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="ReportDuringSubmit2" Value="Submitting your reportâ€¦" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="ReportPreSubmit2" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="ReportPreSubmit2" Value="Your crash report will be submitted before you quit or restart." Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="ReportResubmit" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="ReportResubmit" Value="Resending reports that previously failed to sendâ€¦" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="ReportSubmitFailed" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="ReportSubmitFailed" Value="There was a problem submitting your report." Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="ReportSubmitSuccess" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="ReportSubmitSuccess" Value="Report submitted successfully!" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="Restart" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="Restart" Value="Restart %s" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="SourceRepository" FileName="platform.ini" DirProperty="xulrunner_DIR" Section="Build" Key="SourceRepository" Value="http://hg.mozilla.org/releases/mozilla-release" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="SourceStamp" FileName="platform.ini" DirProperty="xulrunner_DIR" Section="Build" Key="SourceStamp" Value="baefae4b6685" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="ViewReportTitle" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="ViewReportTitle" Value="Report Contents" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="for_example_like_Arabic_Hebrew_Persian._If_your_language_needs_RTL_pleas" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="# for example like Arabic, Hebrew, Persian. If your language needs RTL, please" Value="# for example like Arabic, Hebrew, Persian. If your language needs RTL, please" Action="0" Component_="d3dx9_43.dll"/>
+    <ROW IniFile="use_the_untranslated_English_word_yes_as_value" FileName="crashr~1.ini|crashreporter.ini" DirProperty="xulrunner_DIR" Section="Strings" Key="# use the untranslated English word &quot;yes&quot; as value" Value="# use the untranslated English word &quot;yes&quot; as value" Action="0" Component_="d3dx9_43.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="Not Installed" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_DetectJRE" Condition="1" Sequence="399" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="199" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="198" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="197" Builds="DefaultBuild"/>
+    <ROW Action="AI_FindExeLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="196" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="1549" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="1548" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="6599" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_DetectJRE" Condition="1" Sequence="399" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiJavaComponent">
+    <ROW Name="RedBee.exe" Launcher="RedBee.exe" MainClass="Main_Class" ClassPath="Class_Path" JREMin="Minimum_Version" JREMax="Maximum_Version" IconPath="RedBee.ico" AppType="Application_Type" PlusList="APPDIR;" MinusList="#RedBee.exe;" MacDescription="[|CurrentJavaProductName] [|ProductVersion] © [|Manufacturer], Inc, 2013" MacBundleId="com.[|Manufacturer].[|ProductName].[|CurrentJavaProductName]" FailureCheck="Failure_Check" UACExecutionLevel="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="AI_JREVERFOUND = 1" Description="[ProductName] cannot be installed on systems with JRE version smaller than [AI_MINJREVERSION]" DescriptionLocId="AI.LaunchCondition.Jre" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegLocatorComponent">
+    <ROW Signature_="AI_EXE_PATH_CU" Root="1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+    <ROW Signature_="AI_EXE_PATH_LM" Root="2" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="AI_ExePath" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Value="[AI_SETUPEXEPATH]" Component_="AI_ExePath"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="Red_Bee" Directory_="SHORTCUTDIR" Name="RedBee~1|Red Bee" Component_="RedBee.exe" Target="[#RedBee.exe]" Hotkey="0" Icon_="RedBee.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="Red_Bee_Browser" Directory_="DesktopFolder" Name="RedBee~1|Red Bee Browser" Component_="RedBee.exe" Target="[#RedBee.exe]" Hotkey="0" Icon_="RedBee.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="Uninstall" Directory_="SHORTCUTDIR" Name="Uninst~1|Uninstall" Component_="nssckbi.dll" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Hotkey="0" Icon_="SystemFolder_msiexec.exe" IconIndex="0" ShowCmd="1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMax="[|ProductVersion]" Attributes="1025" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.SynchronizedFolderComponent">
+    <ROW Directory_="RedBee_DIR" SourcePath="..\bin"/>
+  </COMPONENT>
+</DOCUMENT>
